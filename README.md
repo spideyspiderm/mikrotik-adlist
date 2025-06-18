@@ -60,4 +60,8 @@ This project runs automated updates to ensure:
 
 ## License
 
-Lists are provided as-is from their original sources. Please refer to individual filter source licenses for specific terms.
+This project (transformation scripts, automation, and documentation) is licensed under the MIT License.
+
+The transformed blocklists are derived from various upstream sources, each with their own licensing terms. While the transformation and formatting are provided under MIT license, the original filter data remains subject to their respective source licenses. Users should review individual source licenses if redistribution or commercial use is intended.
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=igorkha.mikrotik-adlist)
